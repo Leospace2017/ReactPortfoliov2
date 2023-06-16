@@ -220,6 +220,27 @@ import {
       image: null,
       source_code_link: "https://github.com/Leospace2017",
     },
+    {
+      name: "Small-React-Projects",
+      description:
+        "Deepen different programming languages:To-Do-Note,TicTacToc,DrumKit",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "framer-motion",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tailwindcss,sass",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: null,
+      source_code_link: "https://leospace2017.github.io/Small-React-Projects",
+    },
   ];
   
   export { services, technologies, experiences,  projects };

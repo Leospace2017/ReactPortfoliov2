@@ -1,5 +1,7 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import withHOC from "./hoc/hoc";
+import { motion } from "framer-motion";
 
 import { styles } from "../style";
 import { navLinks } from "../data";
@@ -32,7 +34,8 @@ const Navbar = () => {
           }}
         >
           <img
-            src={logo} alt="logo"
+            src={logo}
+            alt="logo"
             className="
             w-9 h-9 object-contain
           "
@@ -42,7 +45,8 @@ const Navbar = () => {
             text-white text-[18px] font-bold cursor-pointer flex
             "
           >
-            Yanhui &nbsp;<span className="sm:block hidden ">°Fullstack Developer</span>
+            Yanhui &nbsp;
+            <span className="sm:block hidden ">°Fullstack Developer</span>
           </p>
         </Link>
         <ul
@@ -65,44 +69,55 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img 
+          <img
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
           
-          <div className={
-            `${!toggle ? 'hidden' : 'flex'}
-            p-6 bg-gradient-to-r from-blue-800 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`
-          }> 
-              <ul
-          className="
+          <motion.div
+            className={`${!toggle ? "hidden" : "flex"}
+            p-6 justify-space items-center bg-gradient-to-r from-yellow-800 absolute top-20 right-0 mx-4 my-2 min-w-[160px] h-[200px] z-10 rounded-xl`}
+            initial={{
+              x: toggle ? 500 : 1,
+            }}
+            animate={{
+              x: toggle ? 1 : 500,
+            }}
+            transition={{
+              type: "spring",
+              durations: 0.5,
+            }}
+          >
+            <ul
+              className="
           list-none flex sm:hidden justify-end items-start flex-col gap-4 
           "
-        >
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title 
-                ? "text-white" 
-                : "text-secondary"
-              }
-                  hover:text-white font-medium cursor-pointer text-[16px]`}
-              onClick={() => {
-              setToggle(!toggle)
-              setActive(link.title)}}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
-          </div>
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  }
+                  hover:text-white font-medium text-[16px]`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(link.title);
+                  }}
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+const HocNavbar = withHOC(Navbar, 30);
+
+export default HocNavbar;

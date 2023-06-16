@@ -5,6 +5,7 @@ import { styles } from "../style";
 import { github } from "../assets";
 import { projects } from "../data";
 import { fadeIn, textVariant } from "../utils/motion";
+import withHOC from "./hoc/hoc";
 
 const ProjectCard = ({
   index,
@@ -22,7 +23,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="flex flex-col justify-between bg-tertiary p-5 rounded-2xl sm:w-[360px] h-[500px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -77,7 +78,7 @@ const Works = () => {
           Here are a few of my projects.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7 justify-center">
+      <div className="mt-20 flex flex-wrap gap-5 justify-center">
         {projects.map((project, index) => (
           <ProjectCard key={`${index}`} index={index} {...project} />
         ))}
@@ -86,4 +87,6 @@ const Works = () => {
   );
 };
 
-export default Works;
+const HocWorks = withHOC(Works, 1, 1, 0, 0);
+
+export default HocWorks;
