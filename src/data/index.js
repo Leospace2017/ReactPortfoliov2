@@ -223,18 +223,18 @@ import {
     {
       name: "Small-React-Projects",
       description:
-        "Deepen different programming languages:To-Do-Note,TicTacToc,DrumKit",
+        "Deepen different programming languages(StateManagement:Van):To-Do-Note,TicTacToc,DrumKit,VanBus",
       tags: [
         {
           name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "framer-motion",
+          name: "React-Router",
           color: "green-text-gradient",
         },
         {
-          name: "Tailwindcss,sass",
+          name: "Tailwind,Sass",
           color: "pink-text-gradient",
         },
       ],
