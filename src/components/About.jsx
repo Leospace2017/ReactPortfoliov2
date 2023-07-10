@@ -48,7 +48,7 @@ const About = () => {
         interaktive Benutzeroberflächen zu erstellen. Ich kann Komponenten
         entwickeln und diese in einer hierarchischen Struktur organisieren, um
         komplexe Anwendungen zu erstellen. Auch die Arbeit mit State
-        Management-Bibliotheken wie Redux oder Zustand ist mir bekannt. 
+        Management-Bibliotheken ist mir bekannt. 
         <br />
         
         Obwohl ich noch nicht über umfangreiche Backend-Erfahrung verfüge, habe ich
@@ -67,7 +67,7 @@ const About = () => {
         HTML, CSS, JavaScript, React und Node.js. Ich lerne weiterhin aktiv und
         plane, meine Fähigkeiten in den kommenden Jahre weiter auszubauen. Meine Lieblingsframeworks 
         die ich bisher ausprobiert habe, sind Sass Tailwindcss für css und FramerMotion fürs React.
-        In Zukunft , wenn ich damit soweit bin, werde ich auch langsam mit Typescript und Three.js befassen.
+        In Zukunft , wenn ich damit soweit bin, werde ich auch langsam mit Typescript Next.js Jest/Vitest und Three.js befassen.
         Ich bin bereit, an spannenden Projekten mitzuarbeiten und von erfahrenen
         Entwicklern zu lernen. Ich schätze die Gelegenheit, mich
         weiterzuentwickeln und meine Fähigkeiten als Fullstack Developer zu
